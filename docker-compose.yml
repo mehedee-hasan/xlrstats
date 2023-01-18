@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  app:
+    image: xlrstats
+    container_name: xlrstats
+    restart: unless-stopped
+    hostname: xlrstats
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8555:80
+    networks:
+      - network
+#  FOR PRODUCTION THIS PART NEEDS TO BE OMITTED
+    volumes:
+      - ./:/var/www/html
+
+networks:
+   network:
+     driver: bridge
