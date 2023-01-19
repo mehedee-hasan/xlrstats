@@ -103,9 +103,9 @@
 			/**
 			 * Display carousel name if current page is home page
 			 */
-			if ($this->XlrFunctions->isHome()) {
-				echo $this->element('carousel');
-			}
+//			if ($this->XlrFunctions->isHome()) {
+//				echo $this->element('carousel');
+//			}
 			?>
 			<!-- /Carousel End -->
 

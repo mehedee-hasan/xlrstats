@@ -1,6 +1,6 @@
 .idea
 
-#app/tmp/*
+app/tmp/*
 #/app/[Cc]onfig/database.php
 #/app/[Cc]onfig/email.php
 #/app/[Cc]onfig/security.php

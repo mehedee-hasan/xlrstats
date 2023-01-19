@@ -28,17 +28,7 @@ $files = $this->XlrFunctions->getCarouselImages();
 		<div class="stretch">
 			<div id="myCarousel" class="carousel slide">
 				<!-- Carousel items -->
-				<div class="carousel-inner">
-					<div class="active item"><?php echo $this->Html->image('carousel/' . $files[0]) ?></div>
-					<?php foreach($files[1] as $image): ?>
-					<div class="item"><?php echo $this->Html->image('carousel/' . $image); ?></div>
-					<?php endforeach; ?>
-				</div>
-				<?php if(count($files[1]) > 0): ?>
-				<!-- Carousel nav -->
-				<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-				<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-				<?php endif; ?>
+
 			</div>
 		</div>
 	</div>
