@@ -296,4 +296,4 @@ Cache::config('_cake_model_', array(
 /**
  * Installer method is enabled by default. If you prefer to install the app manually, set this setting to 'false'
  */
-Configure::write('Installer.enable', true);
+Configure::write('Installer.enable', false);
