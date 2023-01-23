@@ -61,3 +61,58 @@ Request URL: /js/jquery-1.9.1.min.js
 Stack Trace:
 #0 /var/www/html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2023-01-23 05:39:21 Error: [MissingActionException] Action PlayerStatsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'PlayerStatsController',
+  'action' => 'img',
+)
+Request URL: /1/player_stats/img/background.gif
+Stack Trace:
+#0 /var/www/html/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PlayerStatsController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2023-01-23 05:40:31 Error: [MissingActionException] Action LeaguesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LeaguesController',
+  'action' => 'img',
+)
+Request URL: /1/leagues/img/background.gif
+Stack Trace:
+#0 /var/www/html/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LeaguesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2023-01-23 05:40:32 Error: [MissingActionException] Action LeaguesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LeaguesController',
+  'action' => 'img',
+)
+Request URL: /1/leagues/img/loading.gif
+Stack Trace:
+#0 /var/www/html/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LeaguesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2023-01-23 05:40:33 Error: [MissingActionException] Action LeaguesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LeaguesController',
+  'action' => 'img',
+)
+Request URL: /1/leagues/img/sort_both.png
+Stack Trace:
+#0 /var/www/html/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LeaguesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2023-01-23 05:40:35 Error: [MissingActionException] Action LeaguesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LeaguesController',
+  'action' => 'img',
+)
+Request URL: /1/leagues/img/sort_desc.png
+Stack Trace:
+#0 /var/www/html/lib/Cake/Routing/Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(LeaguesController), Object(CakeRequest), Object(CakeResponse))
+#2 /var/www/html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

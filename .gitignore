@@ -5,10 +5,9 @@ app/tmp/*
 /app/[Cc]onfig/email.php
 /app/[Cc]onfig/security.php
 /app/[Cc]onfig/install
+/app/tmp/
 
 !empty
 
 /app/[Vv]iew/[Pp]ages/xlrstats.com
 /lib/[Cc]ake/[Cc]onsole/[Tt]emplates/skel/tmp/
-
-
