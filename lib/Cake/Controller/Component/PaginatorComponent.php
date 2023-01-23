@@ -179,7 +179,7 @@ class PaginatorComponent extends Component {
 			$extra['type'] = $type;
 		}
 
-		if ((int)$page < 1) {
+		if (intval($page) < 1) {
 			$page = 1;
 		}
 		$page = $options['page'] = (int)$page;
@@ -202,8 +202,6 @@ class PaginatorComponent extends Component {
 			$count = 0;
 		} elseif ($object->hasMethod('paginateCount')) {
 			$count = $object->paginateCount($conditions, $recursive, $extra);
-		} elseif ($page === 1 && count($results) < $limit) {
-			$count = count($results);
 		} else {
 			$parameters = compact('conditions');
 			if ($recursive != $object->recursive) {
@@ -211,9 +209,12 @@ class PaginatorComponent extends Component {
 			}
 			$count = $object->find('count', array_merge($parameters, $extra));
 		}
-		$pageCount = (int)ceil($count / $limit);
+		$pageCount = intval(ceil($count / $limit));
 		$requestedPage = $page;
 		$page = max(min($page, $pageCount), 1);
+		if ($requestedPage > $page) {
+			throw new NotFoundException();
+		}
 
 		$paging = array(
 			'page' => $page,
@@ -235,10 +236,6 @@ class PaginatorComponent extends Component {
 			(array)$this->Controller->request['paging'],
 			array($object->alias => $paging)
 		);
-
-		if ($requestedPage > $page) {
-			throw new NotFoundException();
-		}
 
 		if (
 			!in_array('Paginator', $this->Controller->helpers) &&
@@ -394,7 +391,7 @@ class PaginatorComponent extends Component {
 				if (strpos($key, '.') !== false) {
 					list($alias, $field) = explode('.', $key);
 				}
-				$correctAlias = ($object->alias === $alias);
+				$correctAlias = ($object->alias == $alias);
 
 				if ($correctAlias && $object->hasField($field)) {
 					$order[$object->alias . '.' . $field] = $value;

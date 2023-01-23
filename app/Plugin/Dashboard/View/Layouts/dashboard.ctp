@@ -20,9 +20,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
 		<?php echo $this->Html->charset(); ?>
-		<!--[if IE]>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<![endif]-->
 		<title><?php echo $title_for_layout; ?></title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
@@ -35,7 +33,8 @@
 		echo $this->Html->css('Dashboard.dashboard');
 		echo $this->fetch('Dashboard.css');
 		// Load Scripts from core
-		echo $this->Html->script('jquery-1.11.1.min'); //jQuery
+		echo $this->Html->script('modernizr-2.6.2-respond-1.1.0.min'); //Modernizr
+		echo $this->Html->script('jquery-1.8.2.min'); //jQuery
 		echo $this->Html->script('jquery.dataTables.min'); //dataTables
 		echo $this->Html->script('paging'); //dataTables Twitter Bootstrap Pagination
 		echo $this->Html->script('bootstrap.min'); //Twitter Bootstrap
@@ -46,7 +45,7 @@
 		//Load Temporary Less Files
 		//To work with less files, uncomment two lines below and comment out the dashboard.css line above (echo $this->Html->css('Dashboard.dashboard');)
 		//echo $this->Html->css('Dashboard.less/dashboard.less?', 'stylesheet/less');
-		//echo $this->Html->script('less.min');
+		//echo $this->Html->script('less-1.5.0.min');
 		?>
 
 	</head>

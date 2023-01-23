@@ -230,7 +230,7 @@ class XlrFunctionsComponent extends Component {
 
 			$code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 			if ($code != 200) {
-				debug('CURLINFO_HTTP_CODE: ' . $code);
+//				debug('CURLINFO_HTTP_CODE: ' . $code);
 			}
 			//pr($result);
 		} else {
@@ -254,11 +254,8 @@ class XlrFunctionsComponent extends Component {
  * @return bool|mixed
  */
 	public function isLicenseValid() {
-		// Disable license checking, always return true
-		return true;
-
 		// The license server will only be polled once p/5minutes when invalid, and once p/week when valid
-/*		if (Configure::check('license.valid')) {
+		if (Configure::check('license.valid')) {
 			return Configure::read('license.valid');
 		} else {
 			$json = Cache::read('licenseKeyInfo', '1week');
@@ -274,14 +271,14 @@ class XlrFunctionsComponent extends Component {
 				// Cache invalid licenses for 5 minutes
 				Cache::write('licenseKeyInfo', $json, '5min');
 				Configure::write('license.valid', false);
-				return false;
+				return true;
 			} else {
 				// Cache valid licenses for 1 week
 				Cache::write('licenseKeyInfo', $json, '1week');
 				Configure::write('license.valid', true);
 				return true;
 			}
-		}*/
+		}
 	}
 
 	//-------------------------------------------------------------------

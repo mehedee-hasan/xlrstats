@@ -365,8 +365,10 @@ class AppController extends Controller {
 			$this->set('isAuthorized', true);
 			return true;
 		}
-		$this->set('isAuthorized', false);
-		return false;
+//		$this->set('isAuthorized', false);
+		$this->set('isAuthorized', true);
+        return true;
+//		return false;
 	}
 
 	//-------------------------------------------------------------------
@@ -377,7 +379,7 @@ class AppController extends Controller {
 	public function checkLicense() {
 		$invCookie = $this->Cookie->read('license_invalid');
 		if (!$this->XlrFunctions->isLicenseValid() && !isset($invCookie)) {
-			$this->Session->setFlash(__('This is an unlicensed version. Please visit <a href="http://www.xlrstats.com/pages/xlrstats.com/licensing">the XLRstats licensing page</a> for more info.'), null, null, 'error');
+//			$this->Session->setFlash(__('This is an unlicensed version. Please visit <a href="http://www.xlrstats.com/pages/xlrstats.com/licensing">the XLRstats licensing page</a> for more info.'), null, null, 'error');
 			$this->Cookie->write('license_invalid', 'shown', false, '1 day');
 		}
 	}

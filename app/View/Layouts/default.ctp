@@ -19,22 +19,25 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
-		<?php echo $this->Html->charset();?>
-		<!--[if IE]>
+		<?php
+		echo $this->Html->charset();
+		?>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<![endif]-->
 		<title><?php echo $title_for_layout; ?></title>
 		<?php
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('xlrstats.generic');
+		echo $this->Html->css('http://fonts.googleapis.com/css?family=Lato:400,700');
+		echo $this->Html->css('http://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 
-		echo $this->Html->script('jquery-1.11.1.min'); //jQuery library
+		echo $this->Html->script('modernizr-2.6.2-respond-1.1.0.min'); //Modernizr
+		echo $this->Html->script('jquery-1.9.1.min'); //jQuery library
 		echo $this->Html->script('jquery.dataTables.min'); //dataTables jQuery plugin
-		echo $this->Html->script('http://maps.google.com/maps/api/js?sensor=true'); //Google Maps jQuery plugin
+//		echo $this->Html->script('http://maps.google.com/maps/api/js?sensor=true'); //Google Maps jQuery plugin
 		echo $this->Html->script('jquery.ui.map.full.min.js'); //Google Maps jQuery plugin
 		echo $this->Html->script('markerclusterer'); //for Google Maps jQuery plugin
 		echo $this->Html->script('paging'); // bootstrap pagination plugin for dataTables
@@ -47,7 +50,7 @@
 
 		//To work with less files, uncomment two lines below and comment out the xlrstats.generic.css line above (echo $this->Html->css('xlrstats.generic');)
 		//echo $this->Html->css('less/xlrstats.generic.less?', 'stylesheet/less');
-		//echo $this->Html->script('less.min'); //Just for development
+		//echo $this->Html->script('less-1.5.0.min'); //Just for development
 
 		echo $this->fetch('script');
 
@@ -152,7 +155,6 @@
 						<div class="span3">
 							<h4>Origination</h4>
 							<ul class="icons-ul">
-								<li><i class="icon-li icon-ok"></i><?php echo $this->Html->link('Donate to the project', 'https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=donations%40bigbrotherbot.net', array('target' => '_blank')); ?></li>
 								<li><i class="icon-li icon-ok"></i><?php echo $this->Html->link('XLRstats', 'http://www.xlrstats.com', array('target' => '_blank')); ?></li>
 								<li><i class="icon-li icon-ok"></i><?php echo $this->Html->link('BigBrotherBot', 'http://www.bigbrotherbot.net', array('target' => '_blank')); ?></li>
 								<li><i class="icon-li icon-ok"></i><?php echo $this->Html->link('Echelon', 'http://www.bigbrotherbot.net/echelon/home', array('target' => '_blank')); ?></li>

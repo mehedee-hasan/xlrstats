@@ -25,9 +25,9 @@
 				</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
-						<li>
-							<a href="<?php echo Configure::read('options.homelink') ?>">HOME</a>
-						</li>
+<!--						<li>-->
+<!--							<a href="--><?php //echo Configure::read('options.homelink') ?><!--">HOME</a>-->
+<!--						</li>-->
 						<li <?php if($this->name == 'Pages') echo 'class="active"'; ?>> <!-- if(isset($this->viewVars['page']) AND $this->viewVars['page'] == 'home') -->
 							<?php echo $this->Html->link(__('XLRSTATS'), array('plugin' => null, 'admin' => false, 'controller' => 'pages', 'action' => 'display', 'server' => Configure::read('server_id'), 'home')); ?>
 						</li>

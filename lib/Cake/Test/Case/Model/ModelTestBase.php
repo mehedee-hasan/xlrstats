@@ -18,7 +18,6 @@
 
 App::uses('Model', 'Model');
 App::uses('AppModel', 'Model');
-
 require_once dirname(__FILE__) . DS . 'models.php';
 
 /**
@@ -31,14 +30,14 @@ abstract class BaseModelTest extends CakeTestCase {
 /**
  * autoFixtures property
  *
- * @var bool
+ * @var boolean
  */
 	public $autoFixtures = false;
 
 /**
  * Whether backup global state for each test method or not
  *
- * @var bool
+ * @var boolean
  */
 	public $backupGlobals = false;
 

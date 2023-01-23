@@ -39,7 +39,7 @@ class ShellTestShell extends Shell {
 /**
  * stopped property
  *
- * @var int
+ * @var integer
  */
 	public $stopped;
 
@@ -53,7 +53,7 @@ class ShellTestShell extends Shell {
 /**
  * stop method
  *
- * @param int $status
+ * @param integer $status
  * @return void
  */
 	protected function _stop($status = 0) {
@@ -840,8 +840,6 @@ TEXT;
 
 /**
  * Test file and console and logging
- *
- * @return void
  */
 	public function testFileAndConsoleLogging() {
 		// file logging
@@ -888,8 +886,6 @@ TEXT;
 
 /**
  * Test file and console and logging quiet output
- *
- * @return void
  */
 	public function testQuietLog() {
 		$output = $this->getMock('ConsoleOutput', array(), array(), '', false);

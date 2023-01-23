@@ -23,7 +23,6 @@ App::uses('HtmlHelper', 'View/Helper');
 App::uses('FormHelper', 'View/Helper');
 App::uses('ClassRegistry', 'Utility');
 App::uses('Folder', 'Utility');
-App::uses('CakePlugin', 'Core');
 
 if (!defined('FULL_BASE_URL')) {
 	define('FULL_BASE_URL', 'http://cakephp.org');
@@ -46,7 +45,7 @@ class TheHtmlTestController extends Controller {
 /**
  * uses property
  *
- * @var mixed
+ * @var mixed null
  */
 	public $uses = null;
 }
@@ -907,7 +906,7 @@ class HtmlHelperTest extends CakeTestCase {
 	public function testPluginScriptTimestamping() {
 		CakePlugin::load('TestPlugin');
 
-		$pluginPath = CakePlugin::path('TestPlugin');
+		$pluginPath = App::pluginPath('TestPlugin');
 		$pluginJsPath = $pluginPath . 'webroot/js';
 		$this->skipIf(!is_writable($pluginJsPath), $pluginJsPath . ' is not Writable, timestamp testing has been skipped.');
 
@@ -1429,8 +1428,6 @@ class HtmlHelperTest extends CakeTestCase {
 
 /**
  * Test the array form of $startText
- *
- * @return void
  */
 	public function testGetCrumbFirstLink() {
 		$result = $this->Html->getCrumbList(null, 'Home');
@@ -1772,8 +1769,6 @@ class HtmlHelperTest extends CakeTestCase {
 
 /**
  * Test the inline and block options for meta()
- *
- * @return void
  */
 	public function testMetaWithBlocks() {
 		$this->View->expects($this->at(0))
@@ -2033,6 +2028,7 @@ class HtmlHelperTest extends CakeTestCase {
 /**
  * testCrumbList method
  *
+ *
  * @return void
  */
 	public function testCrumbList() {
@@ -2064,8 +2060,6 @@ class HtmlHelperTest extends CakeTestCase {
 
 /**
  * Test getCrumbList startText
- *
- * @return void
  */
 	public function testCrumbListFirstLink() {
 		$this->Html->addCrumb('First', '#first');

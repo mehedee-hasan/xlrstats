@@ -1,31 +1,63 @@
-2023-01-19 03:25:34 Error: [MissingDatasourceConfigException] The datasource configuration "default" was not found in database.php
-Exception Attributes: array (
-  'config' => 'default',
-)
+2023-01-23 03:50:57 Error: [Exception] DateTime::__construct() [<a href='http://php.net/datetime.construct'>datetime.construct</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone.
 Request URL: /
 Stack Trace:
-#0 /var/www/html/lib/Cake/Model/ConnectionManager.php(91): ConnectionManager::_getConnectionObject('default')
-#1 /var/www/html/lib/Cake/Model/Model.php(3539): ConnectionManager::getDataSource('default')
-#2 /var/www/html/app/Model/AppModel.php(72): Model->setDataSource('default')
-#3 /var/www/html/lib/Cake/Model/Permission.php(63): AppModel->__construct()
-#4 [internal function]: Permission->__construct(Array)
-#5 /var/www/html/lib/Cake/Utility/ClassRegistry.php(169): ReflectionClass->newInstance(Array)
-#6 /var/www/html/lib/Cake/Controller/Component/Acl/DbAcl.php(48): ClassRegistry::init(Array)
-#7 /var/www/html/lib/Cake/Controller/Component/AclComponent.php(88): DbAcl->__construct()
-#8 /var/www/html/lib/Cake/Controller/Component/AclComponent.php(70): AclComponent->adapter('DbAcl')
-#9 /var/www/html/lib/Cake/Controller/ComponentCollection.php(116): AclComponent->__construct(Object(ComponentCollection), Array)
-#10 /var/www/html/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('Acl', Array)
-#11 /var/www/html/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(PagesController))
-#12 /var/www/html/lib/Cake/Routing/Dispatcher.php(186): Controller->constructClasses()
-#13 /var/www/html/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
-#14 /var/www/html/app/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#15 {main}
-2023-01-19 03:25:34 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /var/www/html/lib/Cake/Controller/Component/CookieComponent.php(411): DateTime->__construct()
+#1 /var/www/html/lib/Cake/Controller/Component/CookieComponent.php(224): CookieComponent->_expire('1 day')
+#2 /var/www/html/app/Controller/AppController.php(381): CookieComponent->write('license_invalid', 'shown', false, '1 day')
+#3 /var/www/html/app/Controller/AppController.php(118): AppController->checkLicense()
+#4 [internal function]: AppController->beforeFilter(Object(CakeEvent))
+#5 /var/www/html/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#6 /var/www/html/lib/Cake/Controller/Controller.php(674): CakeEventManager->dispatch(Object(CakeEvent))
+#7 /var/www/html/lib/Cake/Routing/Dispatcher.php(182): Controller->startupProcess()
+#8 /var/www/html/lib/Cake/Routing/Dispatcher.php(160): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#9 /var/www/html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2023-01-23 03:50:57 Error: [Exception] DateTime::__construct() [<a href='http://php.net/datetime.construct'>datetime.construct</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone.
+Stack Trace:
+#0 /var/www/html/lib/Cake/Network/CakeResponse.php(1057): DateTime->__construct('2023-01-23 03:4...')
+#1 /var/www/html/lib/Cake/Network/CakeResponse.php(961): CakeResponse->_getUTCDate(1674445282)
+#2 /var/www/html/lib/Cake/Routing/Filter/AssetDispatcher.php(62): CakeResponse->modified(1674445282)
+#3 [internal function]: AssetDispatcher->beforeDispatch(Object(CakeEvent))
+#4 /var/www/html/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(140): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /var/www/html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2023-01-23 03:50:57 Error: [Exception] DateTime::__construct() [<a href='http://php.net/datetime.construct'>datetime.construct</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone.
+Stack Trace:
+#0 /var/www/html/lib/Cake/Network/CakeResponse.php(1057): DateTime->__construct('2023-01-23 03:4...')
+#1 /var/www/html/lib/Cake/Network/CakeResponse.php(961): CakeResponse->_getUTCDate(1674445282)
+#2 /var/www/html/lib/Cake/Routing/Filter/AssetDispatcher.php(62): CakeResponse->modified(1674445282)
+#3 [internal function]: AssetDispatcher->beforeDispatch(Object(CakeEvent))
+#4 /var/www/html/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(140): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /var/www/html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2023-01-23 03:50:57 Error: [Exception] DateTime::__construct() [<a href='http://php.net/datetime.construct'>datetime.construct</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone.
+Stack Trace:
+#0 /var/www/html/lib/Cake/Network/CakeResponse.php(1057): DateTime->__construct('2023-01-23 03:4...')
+#1 /var/www/html/lib/Cake/Network/CakeResponse.php(961): CakeResponse->_getUTCDate(1674445282)
+#2 /var/www/html/lib/Cake/Routing/Filter/AssetDispatcher.php(62): CakeResponse->modified(1674445282)
+#3 [internal function]: AssetDispatcher->beforeDispatch(Object(CakeEvent))
+#4 /var/www/html/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(140): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /var/www/html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2023-01-23 03:50:57 Error: [Exception] DateTime::__construct() [<a href='http://php.net/datetime.construct'>datetime.construct</a>]: It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone.
+Stack Trace:
+#0 /var/www/html/lib/Cake/Network/CakeResponse.php(1057): DateTime->__construct('2023-01-23 03:4...')
+#1 /var/www/html/lib/Cake/Network/CakeResponse.php(961): CakeResponse->_getUTCDate(1674445282)
+#2 /var/www/html/lib/Cake/Routing/Filter/AssetDispatcher.php(62): CakeResponse->modified(1674445282)
+#3 [internal function]: AssetDispatcher->beforeDispatch(Object(CakeEvent))
+#4 /var/www/html/lib/Cake/Event/CakeEventManager.php(247): call_user_func(Array, Object(CakeEvent))
+#5 /var/www/html/lib/Cake/Routing/Dispatcher.php(140): CakeEventManager->dispatch(Object(CakeEvent))
+#6 /var/www/html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2023-01-23 04:00:41 Error: [MissingControllerException] Controller class JsController could not be found.
 Exception Attributes: array (
-  'class' => 'CssController',
+  'class' => 'JsController',
   'plugin' => NULL,
 )
-Request URL: /css/cake.generic.css
+Request URL: /js/jquery-1.9.1.min.js
 Stack Trace:
-#0 /var/www/html/app/webroot/index.php(98): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 /var/www/html/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}

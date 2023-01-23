@@ -1,6 +1,4 @@
 <?php
-
-
 /**
  * Requests collector.
  *
